@@ -1,0 +1,11 @@
+# Ignore built files without extension
+*
+!/**/
+!*.*
+
+# Built files
+*.out
+out.bmp
+
+# Mac files
+.DS_Store
