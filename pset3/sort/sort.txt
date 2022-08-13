@@ -1,0 +1,15 @@
+selection sort - searches for entire array,
+slow on already sorted array
+O(n^2) to O(n^2) 
+
+bubble sort - sort by pairs to the end or an array
+O(n^2) to O(n) - already sorted faster
+
+merge sort - sorts recursively by halfs
+O(n log_n) to O(n log_n)
+
+sort1 - r8.716 r0.333 s1.186 - bubble
+
+sort2 - r1.442 r0.081 s0.843 - merge
+
+sort3 - r4.228 r0.192 s4.323 - selection
