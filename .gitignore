@@ -6,6 +6,7 @@
 # Built files
 *.out
 out.bmp
+*.o
 
 # Mac files
 .DS_Store
