@@ -47,6 +47,7 @@ def is_card_valid(card_number):
 
 
 def is_amex(number):
+    # should be "3[47]", but here it's ok since there is no commas in a provided card number
     return len(number) == 15 and re.compile("3[4,7]").match(number)
 
 
