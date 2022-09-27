@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                // TODO: Add code to check answers to questions
+                const part1 = document.querySelector('#part-1');
+                const buttonsPart1 = document.querySelectorAll('.js-button-part-1');
+                for (const button of buttonsPart1) {
+                    button.addEventListener('click', function (event) {
+                        const target = event.target;
+                        const name = target.dataset.name;
+                        if (name === 'answer_1-2') {
+                            target.style.backgroundColor = 'green';
+                            part1.innerText = 'Correct!';
+                        } else {
+                            target.style.backgroundColor = 'red';
+                            part1.innerText = 'Incorrect';
+                        }
+                    });
+                }
+
+                const part2 = document.querySelector('#part-2');
+                const inputPart2 = document.querySelector('.js-input-part-2');
+                document.querySelector('.js-button-part-2').addEventListener('click', function (event) {
+                    const value = inputPart2.value;
+                    if (value === 'valid') {
+                        inputPart2.style.color = 'green';
+                        part2.innerText = 'Correct!';
+                    } else {
+                        inputPart2.style.color = 'red';
+                        part2.innerText = 'Incorrect';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>First question</h3>
+                <button data-name="answer_1-1" class="js-button-part-1">Answer 1</button>
+                <button data-name="answer_1-2" class="js-button-part-1">Answer 2</button>
+                <button data-name="answer_1-3" class="js-button-part-1">Answer 3</button>
+                <p id="part-1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Second question</h3>
+                <input type="text" class="js-input-part-2" />
+                <button class="js-button-part-2">Submit</button>
+                <p id="part-2"></p>
+            </div>
+        </div>
+    </body>
+</html>
